@@ -25,11 +25,66 @@
        url('../fonts/barlow-v5-latin-600.woff') format('woff');
 }
 
+:root {
+  --base-dark: #1F1D2B;
+  --primary-color: #EA7C69;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   font-family: 'Barlow', 'Arial', sans-serif;
 }
 
+.header {
+  max-width: 105px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-color: var(--base-dark);
+  box-sizing: border-box;
+}
 
+.logo__img {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
 
+.routes {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.route:last-child {
+  margin-top: 50px;
+}
+
+.route {
+  padding: 12px;
+}
+
+.route__link {
+  display: inline-block;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.route__link:hover {
+  background-color: var(--primary-color);
+}
+
+.route__icon {
+  fill: #EA7C69;
+}
+
+.route__link:hover .route__icon {
+  fill: #ffffff;
+}
